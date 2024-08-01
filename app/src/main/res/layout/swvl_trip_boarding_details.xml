@@ -38,6 +38,7 @@
                     android:background="@drawable/ridues_rightandleft"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/driver_info_id"
                 android:layout_below="@id/gray_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,8 +65,8 @@
                     app:civ_border_width="1dp"
                     android:src="@drawable/ic_car"/>
                 <TextView
-                    app:layout_constraintTop_toTopOf="@id/taxi_avatar"
-                    app:layout_constraintBottom_toBottomOf="@id/taxi_avatar"
+                    app:layout_constraintTop_toTopOf="@id/driver_avatar_id"
+                    app:layout_constraintBottom_toBottomOf="@id/driver_avatar_id"
                     app:layout_constraintStart_toEndOf="@id/taxi_avatar"
                     android:textStyle="bold"
                     android:layout_marginStart="8dp"
@@ -73,6 +74,153 @@
                     android:layout_height="wrap_content"
                     android:textSize="19sp"
                     android:text="@string/abanob_fayeq_boktor_aboaliman"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/threeicon"
+                android:layout_below="@id/driver_info_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="20dp"
+                android:weightSum="3">
+                <include
+                    layout="@layout/boardingcall_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <include
+                    layout="@layout/to_station_boarding_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <include
+                    layout="@layout/cancel_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/date_id"
+                android:layout_below="@id/threeicon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="45dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"
+                    android:text="@string/date"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/time_id"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="45dp"
+                android:layout_below="@id/date_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray"
+                        android:text="@string/time"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray"
+                        android:text="@string/time"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_shap">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginTop="-1.5dp"
+                        android:layout_marginBottom="-1.5dp"
+                        android:layout_gravity="center"
+                        android:layout_width="8dp"
+                        android:layout_height="39.5dp"
+                        android:background="@color/red">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginTop="-1.5dp"
+                        android:layout_marginBottom="-1.5dp"
+                        android:layout_gravity="center"
+                        android:layout_width="8dp"
+                        android:layout_height="39.5dp"
+                        android:background="@color/blue">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_shap3">
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:text="Royal Maxim Kempinski"
+                        android:textSize="19sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CIB, Elshaheed Sayed \n Zakaria St"
+                        android:textSize="19sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="8dp"
+                android:id="@+id/line2_id"
+                android:layout_below="@id/time_id"
+                android:layout_width="380dp"
+                android:layout_height="1dp"
+                android:background="@color/whitGray"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line2_id">
+                <include layout="@layout/price_layout"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/spacer_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="8dp"
+                android:layout_below="@id/price"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:background="@color/whitGray"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_below="@id/spacer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <include layout="@layout/help_layout"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
     </RelativeLayout>
