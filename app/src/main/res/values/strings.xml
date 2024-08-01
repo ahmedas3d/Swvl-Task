@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirstProject</string>
+    <string name="_91">91</string>
+    <string name="bording">BORDING PASS</string>
+    <string name="distext">Swvl relies on technology to deliver its services, allowing users to book
+        seats on buses via the company\'s mobile application. The service includes
+        pre-determined routes with specific stops, providing passengers with a safe and
+        comfortable means of transportation</string>
+    <string name="abanob_fayeq_boktor_aboaliman">Abanob Fayeq Boktor Aboaliman</string>
+</resources>
